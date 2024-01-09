@@ -16,11 +16,20 @@ class Config(object):
     Config class
     """
     LANGUAGES = ['en', 'fr']
+    BABEL_DEFAULT_LOCALE = 'en'
+    BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
 app.config.from_object(Config)
-babel.default_locale = 'en'
-babel.default_timezone = 'UTC'
+
+
+@babel.localeselector
+def get_locale():
+    """
+    get_locale
+    """
+    
+    return 'en'
 
 
 @app.route('/', methods=['GET'])
