@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" 
+"""
 Basic Flask app
 """
 from flask import Flask, render_template, request, g
@@ -96,7 +96,7 @@ def before_request():
 
 @app.route("/", methods=["GET"])
 def index():
-    """ 
+    """
     Returns index
     """
     return render_template("7-index.html")
