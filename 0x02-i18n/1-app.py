@@ -28,7 +28,6 @@ def get_locale():
     """
     get_locale
     """
-    
     return 'en'
 
 
